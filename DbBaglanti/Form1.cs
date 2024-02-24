@@ -9,7 +9,6 @@ namespace DbBaglanti
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("data source=.;initial catalog=AdventureWorks2019;integrated security=true");
@@ -21,16 +20,12 @@ namespace DbBaglanti
             List<Product> productList = new List<Product>();
             while (dr.Read())
             {
-
-
                 productList.Add(new Product()
                 {
 
                     Id = (int)dr["ProductId"],
                     Name = dr["Name"].ToString(),
                 });
-
-
 
             }
 
